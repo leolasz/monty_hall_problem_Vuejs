@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:8081/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link "https:="" giphy.com="" gifs="" 12eo7wogcaoj84="" html5"="" rel="video" <link="" href="https://fonts.googlelapis.com/css?family=Monteserrat">
+    <title>montyhall</title>
+  <link href="./montyhall_files/app.js" rel="preload" as="script"><link href="./montyhall_files/chunk-vendors.js" rel="preload" as="script"><style type="text/css">
+.gift {
+width: 170px;
+height: 295px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+.gift-body {
+
+
+
+
+    background-image: url("https://media.giphy.com/media/3oEduEHZ2ZLeCyTXPi/giphy.gif");
+}
+
+
+</style><style type="text/css">
+:root {
+     --door-border: 5px  black;
+     --selected-border: 5px solid yellow;
+}
+.door-area {
+
+     position: relative;
+     width: 200px;
+     height: 310px;
+     border-bottom: 10px solid grey ;
+     background-image:url(/img/Wood.9e2201d9.png);
+
+     margin-bottom: 20px;
+     font-size:3rem;
+     -webkit-text-stroke: 1px black;
+      color: white;
+      text-shadow:
+          2px  2px 0 #000,
+         -1px -1px 0 #000,
+          1px -1px 0 #000,
+         -1px  1px 0 #000,
+          1px  1px 0 #000;
+     display: flex;
+     justify-content:center;
+}
+.door-frame {
+
+     position:absolute;
+     height: 300px;
+     width: 180px;
+ border-left: var(--door-border);
+     border-top: var(--door-border);
+     border-right: var(--door-border);
+ display: flex;
+     justify-content: center;
+     align-items: flex-end;
+}
+.door {
+     position: absolute;
+     top: 5px;
+     height: 295px;
+     width: 170px;
+    background-color: chocolate;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 20px;
+}
+.door .knob {
+     height: 20px;
+     width: 20px;
+     border-radius: 10px;
+     background-color: silver;
+     align-self: flex-start;
+     margin-top: 30px;
+}
+.door-frame.selected {
+    border-left: var(--selected-border);
+    border-top: var(--selected-border);
+    border-right: var(--selected-border);
+}
+.door > .number.selected {
+ color: yellow ;
+}
+.door > .knob.selected {
+
+   background-color: yellow;
+}
+.door.open {
+width: 170px;
+height: 295px;
+margin: auto;
+
+background-image: url("https://media.giphy.com/media/cMso9wDwqSy3e/giphy.gif");
+}
+.door.open .knob {
+ display: none;
+}
+.door.open .number {
+ display:none;
+}
+
+
+
+ </style><style type="text/css">
+* {
+    box-sizing: border-box;
+    font-family: "Monteserrat", sans-serif;
+}
+body {
+
+    background-image: url(/img/Wall.37de8a0f.png);
+
+
+  background-color: #000;
+  font-family:  cursive;
+}
+#app {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+#app h1 {
+    border: 1px solid #000;
+    background-color: #0004;
+    padding: 20px;
+    margin-bottom: 60px;
+}
+.form {
+font-family: "Monteserrat", sans-serif;
+color: #fff01f;
+display: flex;
+flex-direction: column;
+justify-content: right;
+align-items: center;
+margin-bottom: 40px;
+color: white;
+-webkit-animation: h2 0.35s infinite;
+animation: h2 0.35s infinite;
+}
+.form, .form input, .form button {
+margin-bottom: 10px;
+font-size: 2rem;
+text-align: center;
+}
+.doors {
+
+align-self: stretch;
+display:flex;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+button {
+
+position: relative;
+  outline: none;
+  text-decoration: none;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 60px;
+  width: 210px;
+  opacity: 1;
+  background: #fffc00;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ffffff, #fffc00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.container {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text {
+   font-family: verdana;
+   text-align: center;
+   font-size: 35px;
+   color: rgba(255, 240, 31, 1);
+   text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+}
+.text .letter.m {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+color: rgba(251, 251, 75, 0.92);
+text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+}
+.text .letter.o {
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+  color: rgba(251, 251, 75, 0.92);
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+}
+.text .letter.n {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+  color: rgba(251, 251, 75, 0.92);
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+}
+.text .letter.t {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+  color: rgba(251, 251, 75, 0.92);
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+}
+.text .letter.y {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  color: rgba(251, 251, 75, 0.92);
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+}
+.text .letter.h {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  color: rgba(251, 251, 75, 0.92);
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+}
+.text .letter.a {
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+  color: rgba(251, 251, 75, 0.92);
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+}
+.text .letter.l {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+  color: rgba(251, 251, 75, 0.92);
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+}
+.text .letter.l2 {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+  color: rgba(251, 251, 75, 0.92);
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+}
+.text .letter {
+  position: relative;
+  -webkit-animation: move 1.85s infinite;
+          animation: move 1.85s infinite;
+}
+@-webkit-keyframes move {
+0% {
+    top: 0;
+}
+50% {
+    top: -20px;
+}
+100% {
+    top: 0;
+}
+}
+@keyframes move {
+0% {
+    top: 0;
+}
+50% {
+    top: -20px;
+}
+100% {
+    top: 0;
+}
+}
+h2{
+  font-family: 'Monoton', cursive;
+  font-size: 40px;
+  color: rgba(255, 240, 31, 1);
+}
+h2 {
+font-family:  cursive;
+  color: white;
+  -webkit-animation: h2 0.35s infinite;
+  animation: h2 0.35s infinite;
+}
+@-webkit-keyframes h2 {
+0%   {text-shadow: 0 0 6px #FFF;}
+100%  {text-shadow: 0 0 0px #000;}
+}
+@keyframes h2 {
+0%   {text-shadow: 0 0 6px #FFF;}
+100%  {text-shadow: 0 0 0px #000;}
+}
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button {
+  min-width: 300px;
+  min-height: 60px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: #4FD1C5;
+background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+}
+button::before {
+content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid #00FFCB;
+  box-shadow: 0 0 60px rgba(0,255,203,.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+.button:hover, .button:focus {
+  color: #313133;
+  transform: translateY(-6px);
+}
+button:hover::before, button:focus::before {
+  opacity: 1;
+}
+button::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid ##ffff00;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: ring 1.5s infinite;
+          animation: ring 1.5s infinite;
+}
+button:hover::after, button:focus::after {
+  -webkit-animation: none;
+          animation: none;
+  display: none;
+}
+@-webkit-keyframes ring {
+0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+}
+100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+}
+}
+@keyframes ring {
+0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+}
+100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+}
+}
+
+</style><script charset="utf-8" src="./montyhall_files/app.5bcc6eee9e72855f0295.hot-update.js"></script><script charset="utf-8" src="./montyhall_files/app.09e36a22953859f8d67a.hot-update.js"></script><script charset="utf-8" src="./montyhall_files/app.69d28455d2fa0e615e30.hot-update.js"></script><script charset="utf-8" src="./montyhall_files/app.a69ccb75de1830020c75.hot-update.js"></script><script charset="utf-8" src="./montyhall_files/app.830c7f2cebf6dd57f8be.hot-update.js"></script><script charset="utf-8" src="./montyhall_files/app.4a6d9b4bfad5a4040022.hot-update.js"></script><script charset="utf-8" src="./montyhall_files/app.b3b624542dd8e4914d64.hot-update.js"></script><script charset="utf-8" src="./montyhall_files/app.f2df7071386d918440df.hot-update.js"></script><script charset="utf-8" src="./montyhall_files/app.66dcca7c1f8b5d595700.hot-update.js"></script><script charset="utf-8" src="./montyhall_files/app.46e1879d7c19a98bad22.hot-update.js"></script><script charset="utf-8" src="./montyhall_files/app.205e4262b7b59c4d3c07.hot-update.js"></script><script charset="utf-8" src="./montyhall_files/app.d23aeda18e37f7c3fe43.hot-update.js"></script><script charset="utf-8" src="./montyhall_files/app.e001c01db3c7314e47eb.hot-update.js"></script><script charset="utf-8" src="./montyhall_files/app.fdd8f9c4a932d551e83f.hot-update.js"></script><script charset="utf-8" src="./montyhall_files/app.10d7315efc936a361665.hot-update.js"></script><script charset="utf-8" src="./montyhall_files/app.1747aa1a90720aa87d24.hot-update.js"></script><script charset="utf-8" src="./montyhall_files/app.aa72c56189791ff15fc1.hot-update.js"></script></head>
+  <body>
+    <noscript>
+      <strong>We're sorry but montyhall doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"><h1><div class="container"><div class="text"><span class="letter m">M</span><span class="letter o">O</span><span class="letter n">N</span><span class="letter t">T</span><span class="letter y">Y</span><br><span class="letter h">H</span><span class="letter a">A</span><span class="letter l">L</span><span class="letter l2">L</span></div></div></h1><div class="form"><div><label for="portsAmount">How many doors? </label><br><br><input type="text" id="portsAmount" size="3"></div> <br><div><label for="selectedPort">Choose winning door<div class="headers"></div></label><br><input type="text" id="selectedPort" size="3"></div><br><div class="wrap"><button> start</button><!----></div></div><!----></div>
+    <!-- built files will be auto injected -->
+  <script type="text/javascript" src="./montyhall_files/chunk-vendors.js"></script><script type="text/javascript" src="./montyhall_files/app.js"></script>
+
+</body></html>

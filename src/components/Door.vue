@@ -1,5 +1,8 @@
  <template>
      <div class="door-area">
+     <div class="image">
+
+     </div>
      <div class="door-frame" :class="{ selected: selected && !open }">
        <Gift v-if="open && hasGift" />
 
@@ -33,6 +36,7 @@ data: function () {
       return {
           open: false,
           selected: false
+
       }
    }
  }
@@ -48,22 +52,34 @@ data: function () {
  .door-area {
 
      position: relative;
-     width: 200px;
-     height: 310px;
-     border-bottom: 10px solid brown;
+     height: 295px;
+     width: 170px;
+     border-bottom: 10px solid #D2D1CD ;
+
+     background-image:url("../images/Wood.png");
+
      margin-bottom: 20px;
      font-size:3rem;
-     color: blue;
+     -webkit-text-stroke: 1px black;
+      color: white;
+      text-shadow:
+          2px  2px 0 #000,
+         -1px -1px 0 #000,
+          1px -1px 0 #000,
+         -1px  1px 0 #000,
+          1px  1px 0 #000;
      display: flex;
      justify-content:center;
 
  }
 
+
+
  .door-frame {
 
      position:absolute;
-     height: 300px;
-     width: 180px;
+     height: 295px;
+     width: 170px;
  border-left: var(--door-border);
      border-top: var(--door-border);
      border-right: var(--door-border);
@@ -77,9 +93,8 @@ data: function () {
  .door {
      position: absolute;
      top: 5px;
-     height: 295px;
      width: 170px;
-   background-image: url("../images/Door.png");
+     height: 295px;
      display: flex;
      flex-direction: column;
      align-items: center;
@@ -88,16 +103,17 @@ data: function () {
  }
 
  .door .knob {
-     height: 20px;
-     width: 20px;
+     height: 45px;
+     width: 47px;
      border-radius: 10px;
-     background-color: silver;
+     background-image: url("../images/P.png");
      align-self: flex-start;
      margin-top: 30px;
 
 
  }
  .door-frame.selected {
+
     border-left: var(--selected-border);
     border-top: var(--selected-border);
     border-right: var(--selected-border);
@@ -114,8 +130,12 @@ data: function () {
  }
 
 .door.open {
+width: 170px;
+height: 295px;
+margin: auto;
 
- background-color: black;
+background-image: url("https://media.giphy.com/media/cMso9wDwqSy3e/giphy.gif");
+
 }
 
  .door.open .knob {

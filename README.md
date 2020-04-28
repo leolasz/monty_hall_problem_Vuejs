@@ -8,4 +8,5 @@
 
 //4- fourth commit - components implemented
 
-//5 * fifith commit - style forms and buttons;
+//5- fifith commit - style forms and buttons;
+//6- sixth commit - style components ;

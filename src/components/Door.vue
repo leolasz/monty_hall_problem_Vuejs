@@ -40,34 +40,34 @@ data: function () {
 
  <style>
  :root {
-     --door-border: 5px solid brown;
+     --door-border: 5px  black;
      --selected-border: 5px solid yellow;
 
  }
 
  .door-area {
+
      position: relative;
      width: 200px;
      height: 310px;
-     border-bottom: 10px solid grey;
+     border-bottom: 10px solid brown;
      margin-bottom: 20px;
      font-size:3rem;
-
+     color: blue;
      display: flex;
      justify-content:center;
 
  }
 
  .door-frame {
+
      position:absolute;
      height: 300px;
      width: 180px;
-
-     border-left: var(--door-border);
+ border-left: var(--door-border);
      border-top: var(--door-border);
      border-right: var(--door-border);
-
-     display: flex;
+ display: flex;
      justify-content: center;
      align-items: flex-end;
 
@@ -79,8 +79,7 @@ data: function () {
      top: 5px;
      height: 295px;
      width: 170px;
-     background-color: chocolate;
-
+   background-image: url("../images/Door.png");
      display: flex;
      flex-direction: column;
      align-items: center;
@@ -92,7 +91,7 @@ data: function () {
      height: 20px;
      width: 20px;
      border-radius: 10px;
-     background-color: brown;
+     background-color: silver;
      align-self: flex-start;
      margin-top: 30px;
 
@@ -122,10 +121,13 @@ data: function () {
  .door.open .knob {
  display: none;
 
+
  }
 
  .door.open .number {
  display:none;
  }
+
+
 
  </style>

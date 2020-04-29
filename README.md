@@ -10,3 +10,4 @@
 
 //5- fifith commit - style forms and buttons;
 //6- sixth commit - style components ;
+//7- seventh commit - applied animations and gifs

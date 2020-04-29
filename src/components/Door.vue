@@ -1,5 +1,6 @@
  <template>
      <div class="door-area">
+
      <div class="image">
 
      </div>
@@ -14,7 +15,12 @@
 
      <div class="knob" :class="{ selected }" @click.stop="open = true"></div>
 
-
+     <div class="wall">
+         <div class="threshold">
+             <div class="door">
+             </div>
+         </div>
+     </div>
      </div>
      </div>
 
@@ -54,7 +60,9 @@ data: function () {
      position: relative;
      height: 295px;
      width: 170px;
-     border-bottom: 10px solid #D2D1CD ;
+     border-bottom: 10px solid #E31515 ;
+     animation: blink 1s;
+     animation-iteration-count: 1000;
 
      background-image:url("../images/Wood.png");
 
@@ -72,6 +80,14 @@ data: function () {
      justify-content:center;
 
  }
+
+ .alerts-border {
+    border: 1px solid;
+    animation: blink 1s;
+    animation-iteration-count: 3;
+}
+
+@keyframes blink { 50% { border-color: #FFFF00; }  }
 
 
 
@@ -100,6 +116,7 @@ data: function () {
      align-items: center;
      padding: 20px;
 
+
  }
 
  .door .knob {
@@ -114,9 +131,14 @@ data: function () {
  }
  .door-frame.selected {
 
-    border-left: var(--selected-border);
+    border-left: var(--selected-border) ;
     border-top: var(--selected-border);
     border-right: var(--selected-border);
+    background-image: url("https://media.giphy.com/media/jTZVegIrdLCCY/giphy.gif");
+    width: 170px;
+    height: 295px;
+    background-repeat: space;
+
 
  }
 
@@ -133,7 +155,6 @@ data: function () {
 width: 170px;
 height: 295px;
 margin: auto;
-
 background-image: url("https://media.giphy.com/media/cMso9wDwqSy3e/giphy.gif");
 
 }
@@ -144,9 +165,14 @@ background-image: url("https://media.giphy.com/media/cMso9wDwqSy3e/giphy.gif");
 
  }
 
+
+
  .door.open .number {
  display:none;
+
  }
+
+
 
 
 

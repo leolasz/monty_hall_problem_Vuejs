@@ -33,7 +33,7 @@
      width: 170px;
      height: 295px;
 
-    
+
 
      background-image: url("https://media.giphy.com/media/12Eo7WogCAoj84/giphy.gif");
  }

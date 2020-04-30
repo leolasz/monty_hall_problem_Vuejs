@@ -3,7 +3,7 @@
     <h1> <div class="container">
   <div class="text">
     <span class="letter m">M</span>
-    <span class="letter o">O</span>
+    <span class="letter O">O</span>
     <span class="letter n">N</span>
     <span class="letter t">T</span>
     <span class="letter y">Y</span>
@@ -78,7 +78,10 @@ export default {
 
 body {
 
-    background-image: url('./images/Wall.png');
+    background-image: url('./images/Bricks.gif') ;
+    background-repeat: no repeat;
+  background-size: 180% 180% ;
+
 
 
   background-color: #000;
@@ -91,10 +94,11 @@ body {
     align-items: center;
 }
 #app h1 {
-    border: 1px solid #000;
-    background-color: #0004;
+
+    background-color: none;
     padding: 20px;
     margin-bottom: 60px;
+
 }
 
 .form {
@@ -167,51 +171,61 @@ background: linear-gradient(to right, #ffffff, #fffc00); /* W3C, IE 10+/ Edge, F
 }
 
 .text .letter.m {
+font-size: 100px;
   animation-delay: 0.3s;
 color: rgba(251, 251, 75, 0.92);
 text-shadow: rgb(0, 0, 0) 2px 2px 2px;
 }
 
-.text .letter.o {
+.text .letter.O {
+  font-size: 100px;
   animation-delay: 0.15s;
   color: rgba(251, 251, 75, 0.92);
-  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
-}
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;}
+
 
 .text .letter.n {
+font-size: 100px;
   animation-delay: 0.4s;
   color: rgba(251, 251, 75, 0.92);
   text-shadow: rgb(0, 0, 0) 2px 2px 2px;
 }
 
 .text .letter.t {
+font-size: 100px;
   animation-delay: 0.25s;
   color: rgba(251, 251, 75, 0.92);
   text-shadow: rgb(0, 0, 0) 2px 2px 2px;
 }
 
 .text .letter.y {
+font-size: 100px;
   animation-delay: 0.5s;
   color: rgba(251, 251, 75, 0.92);
   text-shadow: rgb(0, 0, 0) 2px 2px 2px;
 }
 
 .text .letter.h {
+  font-size: 80px;
   animation-delay: 0.5s;
   color: rgba(251, 251, 75, 0.92);
   text-shadow: rgb(0, 0, 0) 2px 2px 2px;
 }
+
 .text .letter.a {
+font-size: 80px;
   animation-delay: 0.15s;
   color: rgba(251, 251, 75, 0.92);
   text-shadow: rgb(0, 0, 0) 2px 2px 2px;
 }
 .text .letter.l {
+font-size: 80px;
   animation-delay: 0.4s;
   color: rgba(251, 251, 75, 0.92);
   text-shadow: rgb(0, 0, 0) 2px 2px 2px;
 }
 .text .letter.l2 {
+font-size: 80px;
   animation-delay: 0.7s;
   color: rgba(251, 251, 75, 0.92);
   text-shadow: rgb(0, 0, 0) 2px 2px 2px;
@@ -236,7 +250,7 @@ text-shadow: rgb(0, 0, 0) 2px 2px 2px;
 
  h2{
   font-family: 'Monoton', cursive;
-  font-size: 40px;
+  font-size: 100px;
   color: rgba(255, 240, 31, 1);
 
 }

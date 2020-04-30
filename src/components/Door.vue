@@ -51,7 +51,7 @@ data: function () {
  <style>
  :root {
      --door-border: 5px  black;
-     --selected-border: 5px solid yellow;
+     --selected-border: 5px solid #00ffff;
 
  }
 
